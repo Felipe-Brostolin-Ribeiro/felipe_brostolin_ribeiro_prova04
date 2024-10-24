@@ -50,38 +50,38 @@ class _RankingPageState extends State<RankingPage> {
                   );
                 },
                 child: Container(
+                  decoration: const BoxDecoration(color: Colors.white),
+                  height: 100,
                   child: const Center(
                       child: Text(
                     "Perfil",
                     style: TextStyle(color: Colors.black, fontSize: 24),
                   )),
-                  decoration: const BoxDecoration(color: Colors.white),
-                  height: 100,
                 ),
               ),
               const Divider(),
               InkWell(
                 onTap: () {},
                 child: Container(
+                  decoration: BoxDecoration(color: Colors.blue[300]),
+                  height: 100,
                   child: const Center(
                       child: Text(
                     "Ranking",
                     style: TextStyle(color: Colors.white, fontSize: 24),
                   )),
-                  decoration: BoxDecoration(color: Colors.blue[300]),
-                  height: 100,
                 ),
               ),
               const Divider(),
               InkWell(
                 child: Container(
+                  decoration: const BoxDecoration(color: Colors.white),
+                  height: 100,
                   child: const Center(
                       child: Text(
                     "Disciplinas",
                     style: TextStyle(color: Colors.black, fontSize: 24),
                   )),
-                  decoration: const BoxDecoration(color: Colors.white),
-                  height: 100,
                 ),
               ),
               const Divider(),
@@ -144,7 +144,7 @@ class _RankingPageState extends State<RankingPage> {
                               ),
                             ),
                             Text(
-                              "${listAlunos[index].nome}",
+                              listAlunos[index].nome,
                               style: const TextStyle(fontSize: 16),
                             ),
                             const Spacer(),

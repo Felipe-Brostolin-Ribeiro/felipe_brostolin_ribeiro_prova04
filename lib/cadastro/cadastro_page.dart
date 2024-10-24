@@ -32,7 +32,7 @@ class _CadastroPageState extends State<CadastroPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_back)),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -57,7 +57,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         }
                         return null;
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Nome Completo",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
@@ -66,7 +66,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     ),
                     TextFormField(
@@ -77,7 +77,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         }
                         return null;
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Cidade",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
@@ -86,7 +86,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     ),
                     DropdownButtonFormField(
@@ -96,7 +96,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         }
                         return null;
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Curso",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
@@ -105,25 +105,25 @@ class _CadastroPageState extends State<CadastroPage> {
                         ),
                       ),
                       items: [
-                        DropdownMenuItem(
-                          child: Text("Selecione um curso"),
+                        const DropdownMenuItem(
                           value: null,
+                          child: Text("Selecione um curso"),
                         ),
                         DropdownMenuItem(
-                          child: Text(listCursos[0].nomeCurso),
                           value: listCursos[0],
+                          child: Text(listCursos[0].nomeCurso),
                         ),
                         DropdownMenuItem(
-                          child: Text(listCursos[1].nomeCurso),
                           value: listCursos[1],
+                          child: Text(listCursos[1].nomeCurso),
                         ),
                         DropdownMenuItem(
-                          child: Text(listCursos[2].nomeCurso),
                           value: listCursos[2],
+                          child: Text(listCursos[2].nomeCurso),
                         ),
                         DropdownMenuItem(
-                          child: Text(listCursos[3].nomeCurso),
                           value: listCursos[3],
+                          child: Text(listCursos[3].nomeCurso),
                         ),
                       ],
                       onChanged: (value) {
@@ -132,7 +132,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         });
                       },
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     ),
                     TextFormField(
@@ -143,7 +143,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         }
                         return null;
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Email",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
@@ -152,7 +152,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     ),
                     TextFormField(
@@ -167,7 +167,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         }
                         return null;
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Senha",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
@@ -176,7 +176,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     ),
                     TextFormField(
@@ -192,7 +192,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         }
                         return null;
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Confirmar Senha",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
@@ -201,7 +201,7 @@ class _CadastroPageState extends State<CadastroPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     ),
                     ElevatedButton(
@@ -220,11 +220,11 @@ class _CadastroPageState extends State<CadastroPage> {
                           );
                         }
                       },
-                      child: Text("Cadastrar-se"),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.black,
                         foregroundColor: Colors.white,
                       ),
+                      child: const Text("Cadastrar-se"),
                     ),
                   ],
                 ),

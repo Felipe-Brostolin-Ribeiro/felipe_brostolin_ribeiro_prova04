@@ -1,4 +1,3 @@
-import 'package:felipe_brostolin_ribeiro_prova04/cadastro/cadastro_page.dart';
 import 'package:felipe_brostolin_ribeiro_prova04/core/enviroments.dart';
 import 'package:felipe_brostolin_ribeiro_prova04/ranking/ranking_page.dart';
 import 'package:flutter/material.dart';
@@ -47,13 +46,13 @@ class _PerfilPageState extends State<PerfilPage> {
               ),
               InkWell(
                 child: Container(
+                  decoration: BoxDecoration(color: Colors.blue[300]),
+                  height: 100,
                   child: const Center(
                       child: Text(
                     "Perfil",
                     style: TextStyle(color: Colors.white, fontSize: 24),
                   )),
-                  decoration: BoxDecoration(color: Colors.blue[300]),
-                  height: 100,
                 ),
               ),
               const Divider(),
@@ -65,25 +64,25 @@ class _PerfilPageState extends State<PerfilPage> {
                   );
                 },
                 child: Container(
+                  decoration: const BoxDecoration(color: Colors.white),
+                  height: 100,
                   child: const Center(
                       child: Text(
                     "Ranking",
                     style: TextStyle(color: Colors.black, fontSize: 24),
                   )),
-                  decoration: const BoxDecoration(color: Colors.white),
-                  height: 100,
                 ),
               ),
               const Divider(),
               InkWell(
                 child: Container(
+                  decoration: const BoxDecoration(color: Colors.white),
+                  height: 100,
                   child: const Center(
                       child: Text(
                     "Disciplinas",
                     style: TextStyle(color: Colors.black, fontSize: 24),
                   )),
-                  decoration: const BoxDecoration(color: Colors.white),
-                  height: 100,
                 ),
               ),
               const Divider(),
@@ -205,11 +204,11 @@ class _PerfilPageState extends State<PerfilPage> {
                       width: 160,
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: const Text("Mudar Senha"),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black,
                           foregroundColor: Colors.white,
                         ),
+                        child: const Text("Mudar Senha"),
                       ),
                     ),
                     const SizedBox(
@@ -230,11 +229,11 @@ class _PerfilPageState extends State<PerfilPage> {
                             );
                           }
                         },
-                        child: const Text("Atualizar"),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black,
                           foregroundColor: Colors.white,
                         ),
+                        child: const Text("Atualizar"),
                       ),
                     ),
                   ],
