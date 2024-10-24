@@ -1,4 +1,5 @@
 import 'package:felipe_brostolin_ribeiro_prova04/core/curso.dart';
+import 'package:felipe_brostolin_ribeiro_prova04/perfil/perfil_page.dart';
 import 'package:flutter/material.dart';
 
 class CadastroPage extends StatefulWidget {
@@ -15,6 +16,7 @@ class _CadastroPageState extends State<CadastroPage> {
   final senhaController = TextEditingController();
   final confirmarSenhaController = TextEditingController();
   final formKey = GlobalKey<FormState>();
+  String? curso;
   final listCursos = [
     Curso(
         id: 1,
@@ -41,7 +43,7 @@ class _CadastroPageState extends State<CadastroPage> {
               child: Image.asset("assets/Logo.png"),
             ),
             Padding(
-              padding: const EdgeInsets.all(32.0),
+              padding: const EdgeInsets.all(24.0),
               child: Form(
                 key: formKey,
                 child: Column(
@@ -123,7 +125,11 @@ class _CadastroPageState extends State<CadastroPage> {
                           value: listCursos[3],
                         ),
                       ],
-                      onChanged: (value) {},
+                      onChanged: (value) {
+                        setState(() {
+                          curso = value?.nomeCurso;
+                        });
+                      },
                     ),
                     SizedBox(
                       height: 24,
@@ -199,7 +205,16 @@ class _CadastroPageState extends State<CadastroPage> {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        if (formKey.currentState!.validate()) {}
+                        if (formKey.currentState!.validate()) {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => PerfilPage(
+                                  cidade: cidadeController.text,
+                                  nome: nomeController.text,
+                                  curso: curso!),
+                            ),
+                          );
+                        }
                       },
                       child: Text("Cadastrar-se"),
                       style: ElevatedButton.styleFrom(
