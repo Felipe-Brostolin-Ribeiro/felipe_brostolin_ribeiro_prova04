@@ -118,9 +118,10 @@ class _RankingPageState extends State<RankingPage> {
                   Icons.trending_up,
                   size: 42,
                 ),
-                Text("Ranking - Paraná"),
+                Text("Ranking - Paraná", style: TextStyle(fontSize: 24),),
               ],
             ),
+            SizedBox(height: 24,),
             Expanded(
               child: ListView.builder(
                 itemCount: 10,
@@ -134,7 +135,7 @@ class _RankingPageState extends State<RankingPage> {
                           children: [
                             Text(
                               "${index + 1} -",
-                              style: const TextStyle(fontSize: 12),
+                              style: const TextStyle(fontSize: 16),
                             ),
                             const CircleAvatar(
                               radius: 32,
