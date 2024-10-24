@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "nome_curso": "Técnico em Desenvolvimento de Sistemas",
+    "area": "Tecnologia",
+    "disciplinas": [
+      {
+        "id": 1,
+        "nome_disciplina": "Paranáogramação Web",
+        "descricao": "Desenvolvimento de sistemas web"
+      },
+      {
+        "id": 2,
+        "nome_disciplina": "Banco de Dados",
+        "descricao": "Modelagem e administração de bancos de dados"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nome_curso": "Técnico em Administração",
+    "area": "Gestão",
+    "disciplinas": [
+      {
+        "id": 1,
+        "nome_disciplina": "Gestão de Pessoas",
+        "descricao": "Administração de equipes e pessoas"
+      },
+      {
+        "id": 2,
+        "nome_disciplina": "Marketing",
+        "descricao": "Fundamentos de marketing para negócios"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nome_curso": "Técnico em Enfermagem",
+    "area": "Saúde",
+    "disciplinas": [
+      {
+        "id": 1,
+        "nome_disciplina": "Enfermagem Geral",
+        "descricao": "Cuidados gerais com pacientes"
+      },
+      {
+        "id": 2,
+        "nome_disciplina": "Anatomia",
+        "descricao": "Estudo da estrutura corporal humana"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nome_curso": "Técnico em Elétrica",
+    "area": "Indústria",
+    "disciplinas": [
+      {
+        "id": 1,
+        "nome_disciplina": "Circuitos Elétricos",
+        "descricao": "Estudo de circuitos e componentes elétricos"
+      },
+      {
+        "id": 2,
+        "nome_disciplina": "Instalações Elétricas",
+        "descricao": "Projetos e execução de instalações elétricas"
+      }
+    ]
+  }
+]
