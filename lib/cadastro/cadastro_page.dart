@@ -1,4 +1,5 @@
 import 'package:felipe_brostolin_ribeiro_prova04/core/curso.dart';
+import 'package:felipe_brostolin_ribeiro_prova04/core/enviroments.dart';
 import 'package:felipe_brostolin_ribeiro_prova04/perfil/perfil_page.dart';
 import 'package:flutter/material.dart';
 
@@ -206,6 +207,9 @@ class _CadastroPageState extends State<CadastroPage> {
                     ElevatedButton(
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
+                          cursoVar = curso!;
+                          cidadeVar = cidadeController.text;
+                          nomeVar = nomeController.text;
                           Navigator.of(context).pushReplacement(
                             MaterialPageRoute(
                               builder: (context) => PerfilPage(
