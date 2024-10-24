@@ -1,4 +1,5 @@
 import 'package:felipe_brostolin_ribeiro_prova04/cadastro/cadastro_page.dart';
+import 'package:felipe_brostolin_ribeiro_prova04/ranking/ranking_page.dart';
 import 'package:flutter/material.dart';
 
 class PerfilPage extends StatefulWidget {
@@ -48,7 +49,7 @@ class _PerfilPageState extends State<PerfilPage> {
                   child: Center(
                       child: Text(
                     "Perfil",
-                        style: TextStyle(color: Colors.white, fontSize: 24),
+                    style: TextStyle(color: Colors.white, fontSize: 24),
                   )),
                   decoration: BoxDecoration(color: Colors.blue[300]),
                   height: 100,
@@ -57,15 +58,17 @@ class _PerfilPageState extends State<PerfilPage> {
               Divider(),
               InkWell(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => CadastroPage() ),);
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => RankingPage()),
+                  );
                 },
                 child: Container(
                   child: Center(
                       child: Text(
                     "Ranking",
-                        style: TextStyle(color: Colors.black, fontSize: 24),
+                    style: TextStyle(color: Colors.black, fontSize: 24),
                   )),
-                    decoration: BoxDecoration(color: Colors.white),
+                  decoration: BoxDecoration(color: Colors.white),
                   height: 100,
                 ),
               ),
