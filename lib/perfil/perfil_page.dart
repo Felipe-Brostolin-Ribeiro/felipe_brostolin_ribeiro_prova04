@@ -1,4 +1,5 @@
 import 'package:felipe_brostolin_ribeiro_prova04/cadastro/cadastro_page.dart';
+import 'package:felipe_brostolin_ribeiro_prova04/core/enviroments.dart';
 import 'package:felipe_brostolin_ribeiro_prova04/ranking/ranking_page.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +47,7 @@ class _PerfilPageState extends State<PerfilPage> {
               ),
               InkWell(
                 child: Container(
-                  child: Center(
+                  child: const Center(
                       child: Text(
                     "Perfil",
                     style: TextStyle(color: Colors.white, fontSize: 24),
@@ -55,36 +56,55 @@ class _PerfilPageState extends State<PerfilPage> {
                   height: 100,
                 ),
               ),
-              Divider(),
+              const Divider(),
               InkWell(
                 onTap: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => RankingPage()),
+                    MaterialPageRoute(
+                        builder: (context) => const RankingPage()),
                   );
                 },
                 child: Container(
-                  child: Center(
+                  child: const Center(
                       child: Text(
                     "Ranking",
                     style: TextStyle(color: Colors.black, fontSize: 24),
                   )),
-                  decoration: BoxDecoration(color: Colors.white),
+                  decoration: const BoxDecoration(color: Colors.white),
                   height: 100,
                 ),
               ),
-              Divider(),
+              const Divider(),
               InkWell(
                 child: Container(
-                  child: Center(
+                  child: const Center(
                       child: Text(
                     "Disciplinas",
                     style: TextStyle(color: Colors.black, fontSize: 24),
                   )),
-                  decoration: BoxDecoration(color: Colors.white),
+                  decoration: const BoxDecoration(color: Colors.white),
                   height: 100,
                 ),
               ),
-              Divider(),
+              const Divider(),
+              const Spacer(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 80),
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black,
+                        foregroundColor: Colors.white),
+                    onPressed: () {},
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.logout,
+                        ),
+                        Text("Log out"),
+                      ],
+                    )),
+              )
             ],
           ),
         ),
@@ -95,7 +115,7 @@ class _PerfilPageState extends State<PerfilPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Column(
+              const Column(
                 children: [
                   CircleAvatar(
                     radius: 32,
@@ -110,7 +130,7 @@ class _PerfilPageState extends State<PerfilPage> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               Form(
@@ -125,7 +145,7 @@ class _PerfilPageState extends State<PerfilPage> {
                         }
                         return null;
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Nome Completo",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
@@ -134,7 +154,7 @@ class _PerfilPageState extends State<PerfilPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     ),
                     TextFormField(
@@ -145,7 +165,7 @@ class _PerfilPageState extends State<PerfilPage> {
                         }
                         return null;
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Cidade",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
@@ -154,7 +174,7 @@ class _PerfilPageState extends State<PerfilPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     ),
                     TextFormField(
@@ -171,28 +191,28 @@ class _PerfilPageState extends State<PerfilPage> {
                         fillColor: Colors.grey[200],
                         filled: true,
                         labelText: "Curso",
-                        border: OutlineInputBorder(
+                        border: const OutlineInputBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(12),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     ),
                     SizedBox(
                       width: 160,
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: Text("Mudar Senha"),
+                        child: const Text("Mudar Senha"),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black,
                           foregroundColor: Colors.white,
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     ),
                     SizedBox(
@@ -200,14 +220,17 @@ class _PerfilPageState extends State<PerfilPage> {
                       child: ElevatedButton(
                         onPressed: () {
                           if (formKey.currentState!.validate()) {
+                            cidadeVar = cidadeController.text;
+                            nomeVar = nomeController.text;
+
                             ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
+                              const SnackBar(
                                 content: Text("Dados Atualizados com sucesso!"),
                               ),
                             );
                           }
                         },
-                        child: Text("Atualizar"),
+                        child: const Text("Atualizar"),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black,
                           foregroundColor: Colors.white,

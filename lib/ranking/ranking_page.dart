@@ -50,20 +50,20 @@ class _RankingPageState extends State<RankingPage> {
                   );
                 },
                 child: Container(
-                  child: Center(
+                  child: const Center(
                       child: Text(
                     "Perfil",
                     style: TextStyle(color: Colors.black, fontSize: 24),
                   )),
-                  decoration: BoxDecoration(color: Colors.white),
+                  decoration: const BoxDecoration(color: Colors.white),
                   height: 100,
                 ),
               ),
-              Divider(),
+              const Divider(),
               InkWell(
                 onTap: () {},
                 child: Container(
-                  child: Center(
+                  child: const Center(
                       child: Text(
                     "Ranking",
                     style: TextStyle(color: Colors.white, fontSize: 24),
@@ -72,19 +72,37 @@ class _RankingPageState extends State<RankingPage> {
                   height: 100,
                 ),
               ),
-              Divider(),
+              const Divider(),
               InkWell(
                 child: Container(
-                  child: Center(
+                  child: const Center(
                       child: Text(
                     "Disciplinas",
                     style: TextStyle(color: Colors.black, fontSize: 24),
                   )),
-                  decoration: BoxDecoration(color: Colors.white),
+                  decoration: const BoxDecoration(color: Colors.white),
                   height: 100,
                 ),
               ),
-              Divider(),
+              const Divider(),
+              const Spacer(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 80),
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black,
+                        foregroundColor: Colors.white),
+                    onPressed: () {},
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.logout,
+                        ),
+                        Text("Log out"),
+                      ],
+                    )),
+              )
             ],
           ),
         ),
@@ -94,7 +112,7 @@ class _RankingPageState extends State<RankingPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Column(
+            const Column(
               children: [
                 Icon(
                   Icons.trending_up,
@@ -114,11 +132,26 @@ class _RankingPageState extends State<RankingPage> {
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
                           children: [
-                            Text("${index+1} -", style: TextStyle(fontSize: 12),),
-                            CircleAvatar(radius: 32, child: Icon(Icons.account_circle_outlined, size: 40,),),
-                            Text("${listAlunos[index].nome}", style: TextStyle(fontSize: 16),),
-                            Spacer(),
-                            Text("${listAlunos[index].pontos}pts", style: TextStyle(fontSize: 16),),
+                            Text(
+                              "${index + 1} -",
+                              style: const TextStyle(fontSize: 12),
+                            ),
+                            const CircleAvatar(
+                              radius: 32,
+                              child: Icon(
+                                Icons.account_circle_outlined,
+                                size: 40,
+                              ),
+                            ),
+                            Text(
+                              "${listAlunos[index].nome}",
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                            const Spacer(),
+                            Text(
+                              "${listAlunos[index].pontos}pts",
+                              style: const TextStyle(fontSize: 16),
+                            ),
                           ],
                         ),
                       ),
